@@ -6,12 +6,13 @@ class Params:
         self.interval = interval
 
 class Tweet : 
-    def __init__(self,ID, author , text , date , answeringTo=[]) : 
-        self.id = ID
+    def __init__(self, id, author, text, date, typeoftweet='tweet', answeringTo=[]) : 
+        self.id = id
         self.author = author
         self.text = text 
-        self.date = date 
-        self.answeringTo = answeringTo 
+        self.date = date
+        self.type = typeoftweet
+        self.answeringTo = answeringTo
         
-    def draw(self) : 
+    #def draw(self) : 
         
