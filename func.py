@@ -1,5 +1,6 @@
 import tweepy
 from datetime import datetime
+from cryptoDict import CryptoDict
 
 def Get_All_Tweets(Username):
   user = client_twi.get_user(
@@ -22,6 +23,7 @@ def Get_All_Tweets(Username):
         end_time=timer
     )
     for j in enumerate(Tweets.data):
+      for k in enumerate(CryptoDict[
       j[1].text.lower().find()
   
   
