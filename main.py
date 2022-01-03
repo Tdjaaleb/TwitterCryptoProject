@@ -7,16 +7,16 @@ import tweepy
 from binance.client import Client
 from mplfinance.original_flavor import candlestick_ohlc
 
-from API_KEYS import key,secret,access,access_s,bearer
+from API_KEY import key,secret,access,access_s,bearer
 
 client_bi = Client()
 
 client_twi = tweepy.Client(
-    bearer_token=bearer,
-    consumer_key=key,
-    consumer_secret=secret,
-    access_token=access,
-    access_token_secret=access_s
+    bearer_token = bearer,
+    consumer_key = key,
+    consumer_secret = secret,
+    access_token = access,
+    access_token_secret = access_s
 )
 
 Username = input("Veuillez entrer l'identifiant Twitter de l'utilisateur : ")
