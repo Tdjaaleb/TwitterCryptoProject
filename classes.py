@@ -15,5 +15,3 @@ class Tweet :
         self.answeringTo = answeringTo
        
     def __str__(self):
-        
-    def draw(self):
