@@ -8,7 +8,7 @@ from binance.client import Client
 from mplfinance.original_flavor import candlestick_ohlc
 
 from API_KEY import key,secret,access,access_s,bearer
-from func import Get_All_Tweets
+from func import Get_Relevant_Tweets
 from cryptoDict import CryptoDict
 
 client_bi = Client()
@@ -26,4 +26,4 @@ Symbol = input("Quelle cryptomonnaie souhaité vous analyser ? ") #BTC / ETH / A
 Currency = input("En quelle monnaie voulez-vous analyser les cours ? ") #USDT / EUR / GBP
 Interval = input("sur combien de temps souhaités vous analyser ? ") #1 Heure / 24 Heures
 
-Liste_Tweets = Get_All_Tweets(Username)
+Liste_Tweets = Get_Relevant_Tweets(Username)
