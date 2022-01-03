@@ -27,6 +27,33 @@ def Get_Relevant_Tweets(Username):
       for j in enumerate(Tweets.data):
         for k in enumerate(CryptoDict[Symbol]):
           if j[1].text.lower().find(k[1])!=-1:
+            if j[1].text.find('@')==0:
+              tweet_type = 'response'
+              answering = j[1].text.split('@')[1]
+              x = Tweet(
+                id = Tweets.data[j[0]]["id"]
+                author = Username
+                typeoftweet = tweet_type
+                text = Tweets.data[j[0]]["text"]
+                date = Tweets.data[j[0]].created_at
+                answeringTo = answering
+              )
+            else if j[1].text.lower().find('rt')==0:
+              tweet_type = 'retweet'
+              x = Tweet(
+                id = Tweets.data[j[0]]["id"]
+                author = Username
+                typeoftweet = tweet_type
+                text = Tweets.data[j[0]]["text"]
+                date = Tweets.data[j[0]].created_at
+              )
+            else:
+              x = Tweet(
+                id = Tweets.data[j[0]]["id"]
+                author = Username
+                text = Tweets.data[j[0]]["text"]
+                date = Tweets.data[j[0]].created_at
+              )
             liste.append(Tweets.data[j[0]])
         timer = str(Tweets.data[j[0]].created_at)
         timer = timer.replace(' ','T')
