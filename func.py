@@ -2,7 +2,7 @@ import tweepy
 from datetime import datetime
 from cryptoDict import CryptoDict
 
-def Get_All_Tweets(Username):
+def Get_Relevant_Tweets(Username):
   liste=[]
   user = client_twi.get_user(
     username = Username,
