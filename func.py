@@ -33,9 +33,9 @@ def Get_Relevant_Tweets(Username):
               x = Tweet(
                 id = Tweets.data[j[0]]["id"]
                 author = Username
-                typeoftweet = tweet_type
                 text = Tweets.data[j[0]]["text"]
                 date = Tweets.data[j[0]].created_at
+                typeoftweet = tweet_type
                 answeringTo = answering
               )
             else if j[1].text.lower().find('rt')==0:
@@ -43,9 +43,9 @@ def Get_Relevant_Tweets(Username):
               x = Tweet(
                 id = Tweets.data[j[0]]["id"]
                 author = Username
-                typeoftweet = tweet_type
                 text = Tweets.data[j[0]]["text"]
                 date = Tweets.data[j[0]].created_at
+                typeoftweet = tweet_type
               )
             else:
               x = Tweet(
