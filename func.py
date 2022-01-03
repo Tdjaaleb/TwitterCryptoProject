@@ -3,6 +3,7 @@ from datetime import datetime
 from cryptoDict import CryptoDict
 
 def Get_All_Tweets(Username):
+  list=[]
   user = client_twi.get_user(
     username = Username,
     user_field = 'public_metrics'
@@ -23,8 +24,14 @@ def Get_All_Tweets(Username):
         end_time=timer
     )
     for j in enumerate(Tweets.data):
-      for k in enumerate(CryptoDict[
-      j[1].text.lower().find()
+      for k in enumerate(CryptoDict[Symbol]):
+        if j[1].text.lower().find(k[1])!=-1:
+          list.append(Tweets.data[j])
+          
+    timer = Tweets.data[99].created_at
+    timer = timer.replace(' ','T')
+    timer = timer.split('+')[0]+'Z'
   
+  return(list)
   
   
