@@ -29,4 +29,4 @@ Interval = input("sur combien de temps souhaités vous analyser ? ") #1 Heure / 
 
 params = Params(Username, Symbol, Currency, Interval)
 
-Liste_Tweets = Get_Relevant_Tweets(Username)
+Liste_Tweets = Get_Relevant_Tweets(params.user)
