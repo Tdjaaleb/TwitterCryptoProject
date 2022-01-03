@@ -7,7 +7,7 @@ import tweepy
 from binance.client import Client
 from mplfinance.original_flavor import candlestick_ohlc
 
-from API_Keys import key,secret,access,access_s,bearer
+from API_KEYS import key,secret,access,access_s,bearer
 
 client_bi = Client()
 
@@ -23,3 +23,6 @@ Username = input("Veuillez entrer l'identifiant Twitter de l'utilisateur : ")
 Symbol = input("Quelle cryptomonnaie souhaité vous analyser ? ") #BTC / ETH / AVAX / BNB / DOGE / ...
 Currency = input("En quelle monnaie voulez-vous analyser les cours ? ") #USDT / EUR / GBP
 Interval = input("sur combien de temps souhaités vous analyser ? ") #1 Heure / 24 Heures
+
+user = client_twi.get_user(username=Username)
+user_id = user.data["id"]
