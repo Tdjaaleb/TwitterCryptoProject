@@ -13,6 +13,8 @@ class Tweet :
         self.date = date
         self.type = typeoftweet
         self.answeringTo = answeringTo
+       
+    def __str__(self):
         
     #def draw(self) : 
         
