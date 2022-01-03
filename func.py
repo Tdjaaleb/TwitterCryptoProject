@@ -31,27 +31,27 @@ def Get_Relevant_Tweets(Username):
               tweet_type = 'response'
               answering = j[1].text.split('@')[1]
               x = Tweet(
-                id = Tweets.data[j[0]]["id"]
-                author = Username
-                text = Tweets.data[j[0]]["text"]
-                date = Tweets.data[j[0]].created_at
-                typeoftweet = tweet_type
+                id = Tweets.data[j[0]]["id"],
+                author = Username,
+                text = Tweets.data[j[0]]["text"],
+                date = Tweets.data[j[0]].created_at,
+                typeoftweet = tweet_type,
                 answeringTo = answering
               )
             elif j[1].text.lower().find('rt')==0:
               tweet_type = 'retweet'
               x = Tweet(
-                id = Tweets.data[j[0]]["id"]
-                author = Username
-                text = Tweets.data[j[0]]["text"]
-                date = Tweets.data[j[0]].created_at
+                id = Tweets.data[j[0]]["id"],
+                author = Username,
+                text = Tweets.data[j[0]]["text"],
+                date = Tweets.data[j[0]].created_at,
                 typeoftweet = tweet_type
               )
             else:
               x = Tweet(
-                id = Tweets.data[j[0]]["id"]
-                author = Username
-                text = Tweets.data[j[0]]["text"]
+                id = Tweets.data[j[0]]["id"],
+                author = Username,
+                text = Tweets.data[j[0]]["text"],
                 date = Tweets.data[j[0]].created_at
               )
             liste.append(Tweets.data[j[0]])
