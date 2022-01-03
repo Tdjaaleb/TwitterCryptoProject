@@ -38,7 +38,7 @@ def Get_Relevant_Tweets(Username):
                 typeoftweet = tweet_type
                 answeringTo = answering
               )
-            else if j[1].text.lower().find('rt')==0:
+            elif j[1].text.lower().find('rt')==0:
               tweet_type = 'retweet'
               x = Tweet(
                 id = Tweets.data[j[0]]["id"]
