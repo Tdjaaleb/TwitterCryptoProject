@@ -6,7 +6,7 @@ class Params:
         self.interval = interval
 
 class Tweet : 
-    def __init__(self, id, author, text, date, typeoftweet='tweet', answeringTo=[]) : 
+    def __init__(self, id, author, text, date, typeoftweet = 'tweet', answeringTo = []) : 
         self.id = id
         self.author = author
         self.text = text 
@@ -16,5 +16,4 @@ class Tweet :
        
     def __str__(self):
         
-    #def draw(self) : 
-        
+    def draw(self):
