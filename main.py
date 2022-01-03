@@ -24,5 +24,5 @@ Symbol = input("Quelle cryptomonnaie souhaité vous analyser ? ") #BTC / ETH / A
 Currency = input("En quelle monnaie voulez-vous analyser les cours ? ") #USDT / EUR / GBP
 Interval = input("sur combien de temps souhaités vous analyser ? ") #1 Heure / 24 Heures
 
-user = client_twi.get_user(username=Username)
-user_id = user.data["id"]
+Get_All_Tweets(Username)
+
