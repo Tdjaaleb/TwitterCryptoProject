@@ -54,7 +54,7 @@ def Get_Relevant_Tweets(Username):
                 text = Tweets.data[j[0]]["text"],
                 date = Tweets.data[j[0]].created_at
               )
-            liste.append(Tweets.data[j[0]])
+            liste.append(x)
         timer = str(Tweets.data[j[0]].created_at)
         timer = timer.replace(' ','T')
         timer = timer.split('+')[0]+'Z'
