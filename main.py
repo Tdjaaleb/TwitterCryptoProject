@@ -10,6 +10,7 @@ from mplfinance.original_flavor import candlestick_ohlc
 from API_KEY import key,secret,access,access_s,bearer
 from func import Get_Relevant_Tweets
 from cryptoDict import CryptoDict
+from classes import Params
 
 client_bi = Client()
 
@@ -25,5 +26,7 @@ Username = input("Veuillez entrer l'identifiant Twitter de l'utilisateur : ")
 Symbol = input("Quelle cryptomonnaie souhaité vous analyser ? ") #BTC / ETH / AVAX / BNB / DOGE / ...
 Currency = input("En quelle monnaie voulez-vous analyser les cours ? ") #USDT / EUR / GBP
 Interval = input("sur combien de temps souhaités vous analyser ? ") #1 Heure / 24 Heures
+
+params = Params(Username, Symbol, Currency, Interval)
 
 Liste_Tweets = Get_Relevant_Tweets(Username)
