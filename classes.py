@@ -14,4 +14,9 @@ class Tweet :
         self.type = typeoftweet
         self.answeringTo = answeringTo
        
-    def __str__(self):
+    def print(self):
+        print ('Tweet : ' + self.text)
+        print ('Date : ' + self.date)
+        print ('Type : ' + self.type)
+        if (self.answeringTo!=[]) : 
+            print ('Réponse à : ' + self.answeringTo)       
