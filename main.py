@@ -30,3 +30,9 @@ Interval = input("Sur combien de temps souhaitez vous analyser ? ") #1 Heure / 2
 params = Params(Username, Symbol, Currency, Interval)
 
 Liste_Tweets = Get_Relevant_Tweets(params.user)
+
+AllTime_Klines = client.get_klines(
+    symbol = params.symbol+params.currency,
+    interval = Client.KLINE_INTERVAL_1DAY,
+    limit = 1000
+)
