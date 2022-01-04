@@ -1,10 +1,3 @@
-class Params:
-    def __init__(self, username, symbol, currency, interval):
-        self.user = username,
-        self.symbol = symbol,
-        self.currency = currency,
-        self.interval = interval
-
 class Tweet : 
     def __init__(self, id, author, text, date, typeoftweet = 'tweet', answeringTo = []) : 
         self.id = id
