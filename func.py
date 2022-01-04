@@ -3,9 +3,12 @@ import tweepy
 from datetime import datetime
 from cryptoDict import CryptoDict
 from API_KEY import key,secret,access,access_s,bearer
-from classes import Params, Tweet
+from classes import Tweet
 
-def Get_Relevant_Tweets(Username, Symbol):
+def Get_Relevant_Tweets(params):
+  Username = params["user"]
+  Symbol = params["symbol"]
+
   client_twi = tweepy.Client(
     bearer_token = bearer,
     consumer_key = key,
