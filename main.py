@@ -8,7 +8,7 @@ from binance.client import Client
 from mplfinance.original_flavor import candlestick_ohlc
 
 from API_KEY import key,secret,access,access_s,bearer
-from func import Get_Relevant_Tweets
+from func import Get_Relevant_Tweets, Plot_Historical
 from cryptoDict import CryptoDict
 from classes import Params
 
@@ -36,3 +36,5 @@ AllTime_Klines = client.get_klines(
     interval = Client.KLINE_INTERVAL_1DAY,
     limit = 1000
 )
+
+Plot_Historical(Liste_Tweets, AllTime_Klines)
