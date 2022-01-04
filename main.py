@@ -8,7 +8,14 @@ Symbol = input("Quelle cryptomonnaie souhaitez vous analyser ? ") #BTC / ETH / A
 Currency = input("En quelle monnaie voulez-vous analyser les cours ? ") #USDT / EUR / GBP
 Interval = input("Sur combien de temps souhaitez vous analyser ? ") #1 Heure / 24 Heures
 
-Liste_Tweets = Get_Relevant_Tweets(Username, Symbol)
+params = {
+    "user" : Username,
+    "symbol" : Symbol,
+    "currency" : Currency,
+    "interval" : Interval
+}
+
+Liste_Tweets = Get_Relevant_Tweets(params)
 
 AllTime_Klines = client_bi.get_klines(
     symbol = Symbol+Currency,
@@ -16,4 +23,4 @@ AllTime_Klines = client_bi.get_klines(
     limit = 1000
 )
 
-Plot_Historical(Liste_Tweets, AllTime_Klines)
+Plot_Historical(Liste_Tweets, AllTime_Klines, params)
