@@ -76,7 +76,11 @@ import matplotlib.pyplot as plt
 from mplfinance.original_flavor import candlestick_ohlc
 import matplotlib.dates
 
-def Plot_Historical(listeTweets, histKlines):
+def Plot_Historical(listeTweets, histKlines, params):
+  Username = params["user"]
+  Symbol = params["symbol"]
+  Currency = params["currency"]
+
   p_time=[]
   p_open=[]
   p_high=[]
@@ -108,3 +112,5 @@ def Plot_Historical(listeTweets, histKlines):
     )
   candlestick_ohlc(ax=ax1,quotes=df.values, width=0.4, colordown="#db3f3f",colorup="#77d879")
   ax1.xaxis.set_major_formatter(matplotlib.dates.DateFormatter("%b %y"))
+  plt.title("Historical Daily "+Symbol+" vs "+Currency)
+  plt.legend([Username+"'s tweets"])
