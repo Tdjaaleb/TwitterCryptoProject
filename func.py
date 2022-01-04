@@ -2,6 +2,7 @@ import tweepy
 from datetime import datetime
 from cryptoDict import CryptoDict
 
+#===============FONCTION QUI RECUPERE ET TRI LES TWEETS QUI NOUS INTERESSENT===============
 def Get_Relevant_Tweets(Username):
   liste=[]
   user = client_twi.get_user(
@@ -59,3 +60,44 @@ def Get_Relevant_Tweets(Username):
         timer = timer.replace(' ','T')
         timer = timer.split('+')[0]+'Z'
   return(liste)
+
+#===============FONCTION QUI PERMET DE TRACER L'HISTORIQUE DE LA CRYPTOMONNAIE EN AJOUTANT LES TWEETS===============
+from binance.client import Client
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+from mplfinance.original_flavor import candlestick_ohlc
+import matplotlib.dates
+
+def Plot_Historical(listeTweets, histKlines):
+  p_time=[]
+  p_open=[]
+  p_high=[]
+  p_low=[]
+  p_close=[]
+  for i in range(len(histKlines)):
+    p_time.append(matplotlib.dates.date2num(datetime.fromtimestamp(histKlines[i][0]/1000).date()))
+    p_open.append(histKlines[i][1])
+    p_high.append(histKlines[i][2])
+    p_low.append(histKlines[i][3])
+    p_close.append(histKlines[i][4])
+  df = {
+    "Date" : p_time,
+    "Open" : p_open,
+    "High" : p_high,
+    "Low" : p_low,
+    "Close" : p_close
+  }
+  df = pd.DataFrame(df)
+  df=df.astype("float64")
+  
+  plt.figure(figsize=(8,6), dpi=125)
+  ax1 = plt.subplot2grid((1,1),(0,0))
+  for i in range(len(listeTweets)):
+    plt.axvline(
+      x=matplotlib.dates.date2num(listeTweets[i].date),
+      color='blue',
+      lw=0.5
+    )
+  candlestick_ohlc(ax=ax1,quotes=df.values, width=0.4, colordown="#db3f3f",colorup="#77d879")
+  ax1.xaxis.set_major_formatter(matplotlib.dates.DateFormatter("%b %y"))
