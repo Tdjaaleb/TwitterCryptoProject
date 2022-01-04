@@ -1,9 +1,18 @@
+#===============FONCTION QUI RECUPERE ET TRI LES TWEETS QUI NOUS INTERESSENT===============
 import tweepy
 from datetime import datetime
 from cryptoDict import CryptoDict
+from API_KEY import key,secret,access,access_s,bearer
+from classes import Params, Tweet
 
-#===============FONCTION QUI RECUPERE ET TRI LES TWEETS QUI NOUS INTERESSENT===============
-def Get_Relevant_Tweets(Username):
+def Get_Relevant_Tweets(Username, Symbol):
+  client_twi = tweepy.Client(
+    bearer_token = bearer,
+    consumer_key = key,
+    consumer_secret = secret,
+    access_token = access,
+    access_token_secret = access_s
+  )
   liste=[]
   user = client_twi.get_user(
     username = Username,
@@ -62,8 +71,6 @@ def Get_Relevant_Tweets(Username):
   return(liste)
 
 #===============FONCTION QUI PERMET DE TRACER L'HISTORIQUE DE LA CRYPTOMONNAIE EN AJOUTANT LES TWEETS===============
-from binance.client import Client
-import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from mplfinance.original_flavor import candlestick_ohlc
