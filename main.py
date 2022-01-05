@@ -44,7 +44,7 @@ else:
             break
         
     Plot_Historical(Liste_Tweets, params)
-
+    
     TweetsImpact = MarketAnalysis(Liste_Tweets, params)
 
     Plot_MostImpactfulTweets(Liste_Tweets, TweetsImpact, params)
