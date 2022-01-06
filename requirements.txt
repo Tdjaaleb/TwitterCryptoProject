@@ -1,4 +1,4 @@
-binance==0.3
+python-binance==1.0.15
 matplotlib==3.5.0
 mplfinance==0.12.7a17
 numpy==1.21.4
