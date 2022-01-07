@@ -5,12 +5,12 @@ from func import Get_Relevant_Tweets, Plot_MostImpactfulTweets
 Username = input("Veuillez entrer l'identifiant Twitter de l'utilisateur : ")
 
 #Demande à l'utilisateur de choisir un cryptomonnaie
-Symbol = input("Quelle cryptomonnaie souhaitez vous analyser ? (BTC/ETH/AVAX/DOGE/BNB)")
+Symbol = input("Quelle cryptomonnaie souhaitez vous analyser ? (BTC/ETH/AVAX/DOGE/BNB) ")
 while Symbol!="BTC" and Symbol!="ETH" and Symbol!="AVAX" and Symbol!="DOGE" and Symbol!="BNB":
     Symbol = input("Veuillez entrer une cryptomonnaie disponible pour analyse (BTC, ETH, AVAX, DOGE, BNB) :")
 
 #Demande à l'utilisateur de choisir une monnaie
-Currency = input("En quelle monnaie voulez-vous analyser les cours ? (EUR/USDT/GBP")
+Currency = input("En quelle monnaie voulez-vous analyser les cours ? (EUR/USDT/GBP) ")
 while Currency!="USDT" and Currency!="EUR" and Currency!="GBP":
     Currency = input("Veuillez entrer une monnaie valide (EUR, USDT, GBP) : ")
 
