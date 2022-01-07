@@ -6,80 +6,139 @@
 
 #### Attributes
 
-Tweet.id {int} <br>
+<i>Tweet.id {int}</i> <br>
 > Id du tweet <br>
 
 <i>Tweet.author {str}</i> <br>
 > Auteur du tweet (nom d'utilisateur) <br>
 
-Tweet.text {str} <br>
+<i>Tweet.text {str}</i> <br>
 > Contenu du tweet <br>
 
-Tweet.date {datetime.datetime} <br>
+<i>Tweet.date {datetime.datetime}</i> <br>
 > Date du tweet <br>
 
-Tweet.type {str} <br>
+<i>Tweet.type {str}</i> <br>
 > Type de tweet <br>
 
-Tweet.candles {pandas.DataFrame} <br>
+<i>Tweet.candles {pandas.DataFrame}</i> <br>
 > Dataframe des données financières avant et après le tweet sur une cryptomonnaie <br>
 
-Tweet.priceInf {float} <br>
+<i>Tweet.priceInf {float}</i> <br>
 > Variation du prix arpès le tweet <br>
 
-Tweet.volumeInf {float} <br>
+<i>Tweet.volumeInf {float}</i> <br>
 > Variation du volume avant/après le tweet <br>
 
 #### Methods
 
-Tweet.__init__(self, id, author, text, date, type) <br>
-Tweet.__str__(self) <br>
-Tweet.get_klines(self, params) <br>
-Tweet.get_influence(self, params) <br>
-Tweet.draw(self, params) <br>
+<i>Tweet.__init__(self, id, author, text, date, type)</i> <br>
+> Initialisation <br>
+
+<i>Tweet.__str__(self)</i> <br>
+> Affichage <br>
+
+<i>Tweet.get_klines(self, params)</i> <br>
+> Permet la récupération des données financières <br>
+
+<i>Tweet.get_influence(self, params)</i> <br>
+> Permet le calcul de l'influence d'un tweet sur le volume et le prix d'une cryptomonnaie <br>
+
+<i>Tweet.draw(self, params)</i> <br>
+> Permet de tracer la courbe avant/après un tweet du prix d'une cryptomonnaie <br>
 
 ### ResponseTweet(Tweet)
 
 #### Attributes
 
-ResponseTweet.id {int} <br>
-ResponseTweet.author {str} <br>
-ResponseTweet.text {str} <br>
-ResponseTweet.date {datetime.datetime} <br>
-ResponseTweet.answeringTo {str} <br>
-ResponseTweet.type {str} <br>
-ResponseTweet.candles {pandas.DataFrame} <br>
-ResponseTweet.priceInf {float} <br>
-ResponseTweet.volumeInf {float} <br>
+<i>ResponseTweet.id {int}</i> <br>
+> Id du tweet <br>
+
+<i>ResponseTweet.author {str}</i> <br>
+> Auteur du de la réponse (nom d'utilisateur) <br>
+
+<i>ResponseTweet.text {str}</i> <br>
+> Contenu du tweet <br>
+
+<i>ResponseTweet.date {datetime.datetime}</i> <br>
+> Date du tweet <br>
+
+<i>ResponseTweet.answeringTo {str}</i> <br>
+> Utilisateur à qui répond le tweet <br>
+
+<i>ResponseTweet.type {str}</i> <br>
+> Type de tweet <br>
+
+<i>ResponseTweet.candles {pandas.DataFrame}</i> <br>
+> Dataframe des données financières avant et après le tweet sur une cryptomonnaie <br>
+
+<i>ResponseTweet.priceInf {float}</i> <br>
+> Variation du prix arpès le tweet <br>
+
+<i>ResponseTweet.volumeInf {float}</i> <br>
+> Variation du volume avant/après le tweet <br>
 
 #### Methods
 
-ResponseTweet.__init__(self, tweet, answeringTo) <br>
-ResponseTweet.__str__(self) <br>
-ResponseTweet.get_klines(self, params) <br>
-ResponseTweet.get_influence(self, params) <br>
-ResponseTweet.draw(self, params) <br>
+<i>ResponseTweet.__init__(self, tweet, answeringTo)</i> <br>
+> Initialisation <br>
+
+<i>ResponseTweet.__str__(self)</i> <br>
+> Affichage <br>
+
+<i>ResponseTweet.get_klines(self, params)</i> <br>
+> Permet la récupération des données financières <br>
+
+<i>ResponseTweet.get_influence(self, params)</i> <br>
+> Permet le calcul de l'influence d'un tweet sur le volume et le prix d'une cryptomonnaie <br>
+
+<i>ResponseTweet.draw(self, params)</i> <br>
+> Permet de tracer la courbe avant/après un tweet du prix d'une cryptomonnaie <br>
 
 ### Retweet(Tweet)
 
 #### Attributes
 
-Retweet.id {int} <br>
-Retweet.author {str} <br>
-Retweet.text {str} <br>
-Retweet.date {datetime.datetime} <br>
-Retweet.original_author {str} <br>
-Retweet.type {str} <br>
-Retweet.candles {pandas.DataFrame} <br>
-Retweet.priceInf {float} <br>
-Retweet.volumeInf {float} <br>
+<i>Retweet.id {int}</i> <br>
+> Id du tweet <br>
+
+<i>Retweet.author {str}</i> <br>
+> Auteur du retweet (nom d'utilisateur) <br>
+
+<i>Retweet.text {str}</i> <br>
+> Contenu du tweet <br>
+
+<i>Retweet.date {datetime.datetime}</i> <br>
+> Date du tweet <br>
+
+<i>Retweet.original_author {str}</i> <br>
+> Utilisateur qui a posté le tweet <br>
+
+<i>Retweet.type {str}</i> <br>
+> Type de tweet <br>
+
+<i>Retweet.candles {pandas.DataFrame}</i> <br>
+> Dataframe des données financières avant et après le tweet sur une cryptomonnaie <br>
+
+<i>Retweet.priceInf {float}</i> <br>
+> Variation du prix arpès le tweet <br>
+
+<i>Retweet.volumeInf {float}</i> <br>
+> Variation du volume avant/après le tweet <br>
 
 #### Methods
 
-Retweet.__init__(self, tweet, original_author) <br>
-Retweet.__str__(self) <br>
-Retweet.get_klines(self, params) <br>
-Retweet.get_influence(self, params) <br>
-Retweet.draw(self, params) <br>
+<i>Retweet.__init__(self, tweet, original_author)</i> <br>
+> Initialisation <br>
 
+<i>Retweet.__str__(self)</i> <br>
+> Affichage <br>
 
+<i>Retweet.get_klines(self, params)</i> <br>
+> Permet la récupération des données financières <br>
+
+<i>Retweet.get_influence(self, params)</i> <br>
+> Permet le calcul de l'influence d'un tweet sur le volume et le prix d'une cryptomonnaie <br>
+
+<i>Retweet.draw(self, params)</i> <br>
+> Permet de tracer la courbe avant/après un tweet du prix d'une cryptomonnaie <br>
