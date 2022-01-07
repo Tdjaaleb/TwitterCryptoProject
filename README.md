@@ -3,7 +3,7 @@
 ## Sommaire
 1. [Notice](#Notice)
 2. [Functions](#Functions)
-  * [Get_Relevant_Tweets](#Get_Relevant_Tweets(params))
+  * [Get_Relevant_Tweets](#Get_Relevant_Tweets)
 4. [Classes](#Classes)
 
 ## Notice
@@ -17,7 +17,7 @@
 
 ## Functions
 
-### Get_Relevant_Tweets(params)
+### Get_Relevant_Tweets
 <i>input : dict({"user","symbol","currency","interval"})</i> <br>
 <i>response : Class(Author)</i> <br>
 > Permet de récupérer les tweets de l'utilisateur choisi sur une cryptomonnaie choisie <br>
