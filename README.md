@@ -7,7 +7,8 @@
 #### Attributes
 
 Tweet.id {int} <br>
-> Izi <br> 
+> Izi <br>
+
 Tweet.author {str} <br>
 > Izi <br>
 Tweet.text {str} <br>
