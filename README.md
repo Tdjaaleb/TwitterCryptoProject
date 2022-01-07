@@ -7,16 +7,28 @@
 #### Attributes
 
 Tweet.id {int} <br>
-> Izi <br>
+> Id du tweet <br>
 
 Tweet.author {str} <br>
-> Izi <br>
+> Auteur du tweet (nom d'utilisateur) <br>
+
 Tweet.text {str} <br>
+> Contenu du tweet <br>
+
 Tweet.date {datetime.datetime} <br>
+> Date du tweet <br>
+
 Tweet.type {str} <br>
+> Type de tweet <br>
+
 Tweet.candles {pandas.DataFrame} <br>
+> Dataframe des données financières avant et après le tweet sur une cryptomonnaie <br>
+
 Tweet.priceInf {float} <br>
+> Variation du prix arpès le tweet <br>
+
 Tweet.volumeInf {float} <br>
+> Variation du volume avant/après le tweet <br>
 
 #### Methods
 
