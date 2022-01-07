@@ -1,5 +1,14 @@
 # TwitterCryptoProject
 
+## Notice d'utilisation
+
+1. Remplissez les informations de votre API Twitter dans le fichier 'API_KEY.py'
+2. Installez les librairies requises aux versions correspondantes à l'utilisation de l'application (cf 'requirements.txt')
+3. Executez le fichier 'main.py'
+4. Remplissez les champs demandez par l'application (Username, Symbol (cryptomonnaie), Currency, Interval (intervalle d'analyse))
+5. Attendez jusqu'à voir apparaître les graphiques d'analyse
+6. Executez les fonctions supplémentaires mises à disposition ou bien fermez l'application
+
 ## Classes
 
 ### Tweet
@@ -155,4 +164,3 @@
 <i>input : Class(Author), dict({"user","symbol","currency","interval"})</i> <br>
 <i>response : None</i>
 > Permet de tracer les courbes de prix d'une cryptomonnaie avant/après pour le tweet le plus influent à la hausse et le plus influent à la baisse <br>
-
