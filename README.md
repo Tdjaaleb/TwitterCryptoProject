@@ -174,3 +174,54 @@
 
 <i>Retweet.draw(self, params)</i> <br>
 > Permet de tracer la courbe avant/après un tweet du prix d'une cryptomonnaie <br>
+
+### Twittos
+
+#### Attributes
+
+<i>Twittos.user_id {int}</i> <br>
+> Id de l'utilisateur <br>
+
+<i>Twittos.username {str}</i> <br>
+> Nom de l'utilisateur <br>
+
+<i>Twittos.Crypto {str}</i> <br>
+> Cryptomonnaie sur laquelle l'analyse est faite <br>
+
+<i>Twittos.NbTweet {int}</i> <br>
+> Nombre de Tweets parlant de la cryptomonnaie <br>
+
+<i>Twittos.Tweets {list}</i> <br>
+> Liste de tous les tweets parlant de la cryptomonnaie (les éléments de la liste sont de types Tweet, Retweet ou ResponseTweet <br>
+
+<i>Twittos.priceInf {float}</i> <br>
+> Influence moyenne d'un tweet sur le prix de la cryptomonnaie <br>
+
+<i>Twittos.volumeInf {float}</i> <br>
+> Influence moyenne d'un tweet sur le volume d'échange de la cryptomonnaie <br>
+
+#### Methods
+
+<i>Twittos.__init__(self, user_id,username, Crypto)</i> <br>
+> Initialisation <br>
+
+<i>Twittos.__str__(self)</i> <br>
+> Affichage <br>
+
+<i>Twittos.Afficher_Tweets(self, type)</i> <br>
+> Affiche tous les tweets de l'utilisateur, type permet de choisir quels tweets affichés (all, tweet, retweet, response) <br>
+
+<i>Twittos.add(self, Tweet)</i> <br>
+> Ajoute un tweet à la liste Twittos.Tweets <br>
+
+<i>Twittos.remove_duplicates(self)</i> <br>
+> Supprime les tweets en doublon dans la liste Twittos.Tweets <br>
+
+<i>Twittos.get_influence(self, params)</i> <br>
+> Calcule l'influence moyenne d'un tweet de l'utilisateur sur le prix et le volume d'une cryptomonnaie <br>
+
+<i>Twittos.draw(self, params)</i> <br>
+> Trace le graphique historique du prix de la cryptomonnaie avec tous les tweets affichés aux dates correspondantes <br>
+
+<i>Twittos.Plot_Tweet(self, params, id)</i> <br>
+> Trace le graphique avant/après un tweet du prix de la cryptomonnaie selon l'id du tweet sélectionnés <br>
