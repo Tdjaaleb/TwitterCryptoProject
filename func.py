@@ -62,7 +62,7 @@ def Get_Relevant_Tweets(params):
                         elif j[1].text.lower().find('rt')==0:
                             originalAuth=j[1].text.split('@')[1]
                             originalAuth=originalAuth.split(':')[0]
-                            x = Retweet(original_author=originalAuth)
+                            x = Retweet(x, original_author=originalAuth)
                         #On ajoute l'objet à l'objet de classe Author (il est précisement ajouté à Author.Tweets qui est une liste)
                         Author.add(x)
                 #La date devient la date du tweet le plus ancien de la requête
