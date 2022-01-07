@@ -4,7 +4,7 @@
 
 ### Tweet
 
-<u>#### Attributes</u>
+#### Attributes
 
 Tweet.id {int} <br>
 > Id du tweet <br>
