@@ -6,7 +6,7 @@
 
 #### Attributes
 
-Tweet.id {int} n/
+Tweet.id {int} \n
 Tweet.author {str}
 Tweet.text {str}
 Tweet.date {datetime.datetime}
