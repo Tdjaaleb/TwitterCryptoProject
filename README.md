@@ -4,7 +4,12 @@
 1. [Notice](#Notice)
 2. [Functions](#Functions)
   * [Get_Relevant_Tweets](#Get_Relevant_Tweets)
-4. [Classes](#Classes)
+  * [Plot_MostImpactfulTweets](#Plot_MostImpactfulTweets)
+3. [Classes](#Classes)
+  * [Tweet](#Tweet)
+  * [ResponseTweet](#Tweet)
+  * [Retweet](#Retweet)
+  * [Twittos](#Twittos)
 
 ## Notice
 
@@ -22,7 +27,7 @@
 <i>response : Class(Author)</i> <br>
 > Permet de récupérer les tweets de l'utilisateur choisi sur une cryptomonnaie choisie <br>
 
-### Plot_MostImpactfulTweets(Author, params)
+### Plot_MostImpactfulTweets
 <i>input : Class(Author), dict({"user","symbol","currency","interval"})</i> <br>
 <i>response : None</i>
 > Permet de tracer les courbes de prix d'une cryptomonnaie avant/après pour le tweet le plus influent à la hausse et le plus influent à la baisse <br>
@@ -74,7 +79,7 @@
 <i>Tweet.draw(self, params)</i> <br>
 > Permet de tracer la courbe avant/après un tweet du prix d'une cryptomonnaie <br>
 
-### ResponseTweet(Tweet)
+### ResponseTweet
 
 #### Attributes
 
@@ -122,7 +127,7 @@
 <i>ResponseTweet.draw(self, params)</i> <br>
 > Permet de tracer la courbe avant/après un tweet du prix d'une cryptomonnaie <br>
 
-### Retweet(Tweet)
+### Retweet
 
 #### Attributes
 
