@@ -3,7 +3,8 @@
 ## Sommaire
 1. [Notice](#Notice)
 2. [Functions](#Functions)
-3. [Classes](#Classes)
+  * [Get_Relevant_Tweets](#Get_Relevant_Tweets(params))
+4. [Classes](#Classes)
 
 ## Notice
 
