@@ -5,7 +5,7 @@
 1. Remplissez les informations de votre API Twitter dans le fichier 'API_KEY.py'
 2. Installez les librairies requises aux versions correspondantes à l'utilisation de l'application (cf 'requirements.txt')
 3. Executez le fichier 'main.py'
-4. Remplissez les champs demandez par l'application (Username, Symbol (cryptomonnaie), Currency, Interval (intervalle d'analyse))
+4. Remplissez les champs demandés par l'application (Username, Symbol (cryptomonnaie), Currency, Interval (intervalle d'analyse))
 5. Attendez jusqu'à voir apparaître les graphiques d'analyse
 6. Executez les fonctions supplémentaires mises à disposition ou bien fermez l'application
 
