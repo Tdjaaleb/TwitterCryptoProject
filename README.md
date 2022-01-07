@@ -7,64 +7,64 @@
 #### Attributes
 
 Tweet.id {int} <br>
-Tweet.author {str}
-Tweet.text {str}
-Tweet.date {datetime.datetime}
-Tweet.type {str}
-Tweet.candles {pandas.DataFrame}
-Tweet.priceInf {float}
-Tweet.volumeInf {float}
+Tweet.author {str} <br>
+Tweet.text {str} <br>
+Tweet.date {datetime.datetime} <br>
+Tweet.type {str} <br>
+Tweet.candles {pandas.DataFrame} <br>
+Tweet.priceInf {float} <br>
+Tweet.volumeInf {float} <br>
 
 #### Methods
 
-Tweet.__init__(self, id, author, text, date, type)
-Tweet.__str__(self)
-Tweet.get_klines(self, params)
-Tweet.get_influence(self, params)
-Tweet.draw(self, params)
+Tweet.__init__(self, id, author, text, date, type) <br>
+Tweet.__str__(self) <br>
+Tweet.get_klines(self, params) <br>
+Tweet.get_influence(self, params) <br>
+Tweet.draw(self, params) <br>
 
 ### ResponseTweet(Tweet)
 
 #### Attributes
 
-ResponseTweet.id {int}
-ResponseTweet.author {str}
-ResponseTweet.text {str}
-ResponseTweet.date {datetime.datetime}
-ResponseTweet.answeringTo {str}
-ResponseTweet.type {str}
-ResponseTweet.candles {pandas.DataFrame}
-ResponseTweet.priceInf {float}
-ResponseTweet.volumeInf {float}
+ResponseTweet.id {int} <br>
+ResponseTweet.author {str} <br>
+ResponseTweet.text {str} <br>
+ResponseTweet.date {datetime.datetime} <br>
+ResponseTweet.answeringTo {str} <br>
+ResponseTweet.type {str} <br>
+ResponseTweet.candles {pandas.DataFrame} <br>
+ResponseTweet.priceInf {float} <br>
+ResponseTweet.volumeInf {float} <br>
 
 #### Methods
 
-ResponseTweet.__init__(self, tweet, answeringTo)
-ResponseTweet.__str__(self)
-ResponseTweet.get_klines(self, params)
-ResponseTweet.get_influence(self, params)
-ResponseTweet.draw(self, params)
+ResponseTweet.__init__(self, tweet, answeringTo) <br>
+ResponseTweet.__str__(self) <br>
+ResponseTweet.get_klines(self, params) <br>
+ResponseTweet.get_influence(self, params) <br>
+ResponseTweet.draw(self, params) <br>
 
 ### Retweet(Tweet)
 
 #### Attributes
 
-Retweet.id {int}
-Retweet.author {str}
-Retweet.text {str}
-Retweet.date {datetime.datetime}
-Retweet.original_author {str}
-Retweet.type {str}
-Retweet.candles {pandas.DataFrame}
-Retweet.priceInf {float}
-Retweet.volumeInf {float}
+Retweet.id {int} <br>
+Retweet.author {str} <br>
+Retweet.text {str} <br>
+Retweet.date {datetime.datetime} <br>
+Retweet.original_author {str} <br>
+Retweet.type {str} <br>
+Retweet.candles {pandas.DataFrame} <br>
+Retweet.priceInf {float} <br>
+Retweet.volumeInf {float} <br>
 
 #### Methods
 
-Retweet.__init__(self, tweet, original_author)
-Retweet.__str__(self)
-Retweet.get_klines(self, params)
-Retweet.get_influence(self, params)
-Retweet.draw(self, params)
+Retweet.__init__(self, tweet, original_author) <br>
+Retweet.__str__(self) <br>
+Retweet.get_klines(self, params) <br>
+Retweet.get_influence(self, params) <br>
+Retweet.draw(self, params) <br>
 
 
