@@ -1,5 +1,10 @@
 # TwitterCryptoProject
 
+## Sommaire
+1. [Notice d'utilisation](#Notice d'utilisation)
+2. [Functions](#Functions)
+3. [Classes](#Classes)
+
 ## Notice d'utilisation
 
 1. Remplissez les informations de votre API Twitter dans le fichier 'API_KEY.py'
