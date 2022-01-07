@@ -9,6 +9,18 @@
 5. Attendez jusqu'à voir apparaître les graphiques d'analyse
 6. Executez les fonctions supplémentaires mises à disposition ou bien fermez l'application
 
+## Functions
+
+### Get_Relevant_Tweets(params)
+<i>input : dict({"user","symbol","currency","interval"})</i> <br>
+<i>response : Class(Author)</i> <br>
+> Permet de récupérer les tweets de l'utilisateur choisi sur une cryptomonnaie choisie <br>
+
+### Plot_MostImpactfulTweets(Author, params)
+<i>input : Class(Author), dict({"user","symbol","currency","interval"})</i> <br>
+<i>response : None</i>
+> Permet de tracer les courbes de prix d'une cryptomonnaie avant/après pour le tweet le plus influent à la hausse et le plus influent à la baisse <br>
+
 ## Classes
 
 ### Tweet
@@ -151,16 +163,3 @@
 
 <i>Retweet.draw(self, params)</i> <br>
 > Permet de tracer la courbe avant/après un tweet du prix d'une cryptomonnaie <br>
-
-## Functions
-
-### Get_Relevant_Tweets(params)
-<i>input : dict({"user","symbol","currency","interval"})</i> <br>
-<i>response : Class(Author)</i> <br>
-> Permet de récupérer les tweets de l'utilisateur choisi sur une cryptomonnaie choisie <br>
-
-
-### Plot_MostImpactfulTweets(Author, params)
-<i>input : Class(Author), dict({"user","symbol","currency","interval"})</i> <br>
-<i>response : None</i>
-> Permet de tracer les courbes de prix d'une cryptomonnaie avant/après pour le tweet le plus influent à la hausse et le plus influent à la baisse <br>
