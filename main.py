@@ -10,6 +10,10 @@ while Symbol!="BTC" and Symbol!="ETH" and Symbol!="AVAX" and Symbol!="DOGE" and 
     Symbol = input("Veuillez entrer une cryptomonnaie disponible pour analyse (BTC, ETH, AVAX, DOGE, BNB) :")
 
 #Demande à l'utilisateur de choisir une monnaie
+if Symbol=="AVAX":
+    Currency = input("En quelle monnaie voulez-vous analyser les cours ? (EUR/USDT) GBP non disponible pour l'AVAX")
+    while Currency!="USDT" and Currency!="EUR":
+        Currency = input("Veuillez entrer une monnaie valide (EUR, USDT) GBP non disponible pour l'AVAX : ")
 Currency = input("En quelle monnaie voulez-vous analyser les cours ? (EUR/USDT/GBP) ")
 while Currency!="USDT" and Currency!="EUR" and Currency!="GBP":
     Currency = input("Veuillez entrer une monnaie valide (EUR, USDT, GBP) : ")
