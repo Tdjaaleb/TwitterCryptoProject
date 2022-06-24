@@ -1,5 +1,7 @@
 Ce travail a été réalisé dans le cadre d'une évaluation notée pour le cours de Programmation Avancée du Master 1 Informatique de l'Université Lumière Lyon 2.
 
+Note : 19.5/20
+
 # TwitterCryptoProject
 
 ## Sommaire
